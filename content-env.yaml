@@ -1,0 +1,18 @@
+name: content-env
+channels:
+  - pytorch
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.9
+  # Core scientific packages
+  - numpy
+  - pandas
+  - scikit-learn
+  - matplotlib
+  # For PyTorch (CPU version or CUDA version if GPU is needed):
+  - pytorch=2.0
+  # If you do not need GPU support, you can remove cudatoolkit and just install CPU PyTorch
+  - pip
+  - pip:
+    - gensim  # For Word2Vec
